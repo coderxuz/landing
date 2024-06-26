@@ -55,6 +55,8 @@
 .owl-carousel .owl-item img {
   display: block;
   width: 100%;
+  filter: brightness(0) saturate(100%) invert(71%) sepia(53%) saturate(609%)
+    hue-rotate(82deg) brightness(86%) contrast(89%);
 }
 .owl-carousel .owl-nav.disabled,
 .owl-carousel .owl-dots.disabled {
