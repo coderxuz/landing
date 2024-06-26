@@ -133,9 +133,10 @@
 		items:4,
 		loop:true,
 		dots: true,
-		nav: true,
+		nav: false,
 		autoplay: true,
 		margin:30,
+		pointer:false,
 		  responsive:{
 			  0:{
 				  items:1
