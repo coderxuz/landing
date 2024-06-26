@@ -155,12 +155,12 @@ body {
 }
 
 ::selection {
-  background: #f5a425;
+  background: var(--secondary);
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #f5a425;
+  background: var(--secondary);
   color: #fff;
 }
 
@@ -194,12 +194,14 @@ body {
 
 .main-button-red a:hover {
   opacity: 0.9;
+  background-color: var(--foreground);
+  color: var(--background);
 }
 
 .main-button-yellow a {
   font-size: 13px;
   color: #fff;
-  background-color: #f5a425;
+  background-color: var(--ring);
   padding: 12px 30px;
   display: inline-block;
   border-radius: 22px;
@@ -260,7 +262,7 @@ header
 }
 
 .sub-header .right-icons ul li a:hover {
-  color: var(--hover);
+  color: var(--secondary);
 }
 
 .sub-header .left-content p em {
@@ -805,6 +807,7 @@ services
 
 .services .item {
   background-image: url(../images/service-item-bg.jpg);
+  filter: hue-rotate(130deg); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1107,7 +1110,7 @@ section.apply-now .item p {
   transition: transform 200ms ease-in-out;
 }
 .accordion-head.is-open {
-  color: #f5a425;
+  color: var(--secondary);
   border-bottom: none;
 }
 .accordion-head.is-open .icon {
@@ -1168,7 +1171,7 @@ section.our-courses {
 }
 
 .our-courses .item .down-content .info span {
-  color: #a12c2f;
+  color: var(--secondary);
   font-size: 15px;
   font-weight: 600;
   text-align: right;
@@ -1312,7 +1315,7 @@ section.our-facts h2 {
 
 .count-digit {
     margin: 5px 0px;
-    color: #f5a425;
+    color: var(--secondary);
     font-weight: 700;
     font-size: 36px;
 }
@@ -1332,6 +1335,7 @@ section.our-facts .video {
   margin-left: 70px;
   background-image: url(../images/video-item-bg.jpg);
   background-repeat: no-repeat;
+  filter: hue-rotate(120deg); /* 120 darajaga rangni o'zgartirish */
   background-position: center center;
   background-size: cover;
   border-radius: 20px;
@@ -1408,7 +1412,7 @@ section.contact-us #contact textarea {
 section.contact-us #contact button {
   font-size: 13px;
   color: #fff;
-  background-color: #a12c2f;
+  background-color: var(--secondary);
   padding: 12px 30px;
   display: inline-block;
   border-radius: 22px;
@@ -1424,7 +1428,7 @@ section.contact-us #contact button:hover {
 }
 
 section.contact-us .right-info {
-  background-color: #a12c2f;
+  background-color: var(--secondary);
   border-radius: 20px;
   padding: 40px;
 }
@@ -1469,7 +1473,7 @@ section.contact-us .right-info ul li span {
 }
 
 .footer p a {
-  color: #f5a425;
+  color: var(--secondary);
 }
 
 
