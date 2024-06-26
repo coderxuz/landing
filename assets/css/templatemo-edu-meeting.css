@@ -264,11 +264,8 @@ body {
 }
 
 .main-button-red a:hover {
-  opacity: 0.9;
   background-color: transparent;
   color: var(--secondary);
-  background-color: var(--foreground);
-  color: var(--background);
 }
 
 .main-button-yellow a {
