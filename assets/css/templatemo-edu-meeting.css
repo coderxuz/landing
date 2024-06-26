@@ -223,12 +223,12 @@ body {
 }
 
 ::selection {
-  background: #f5a425;
+  background: var(--secondary);
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #f5a425;
+  background: var(--secondary);
   color: #fff;
 }
 
@@ -267,6 +267,8 @@ body {
   opacity: 0.9;
   background-color: transparent;
   color: var(--secondary);
+  background-color: var(--foreground);
+  color: var(--background);
 }
 
 .main-button-yellow a {
@@ -340,7 +342,7 @@ header
 }
 
 .sub-header .right-icons ul li a:hover {
-  color: var(--hover);
+  color: var(--secondary);
 }
 
 .sub-header .left-content p em {
@@ -882,7 +884,11 @@ services
 
 .services .item {
   background-image: url(../images/service-item-bg.jpg);
+<<<<<<< HEAD
   filter: hue-rotate(140deg);
+=======
+  filter: hue-rotate(130deg); 
+>>>>>>> main
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1260,7 +1266,7 @@ section.our-courses {
 }
 
 .our-courses .item .down-content .info span {
-  color: #a12c2f;
+  color: var(--secondary);
   font-size: 15px;
   font-weight: 600;
   text-align: right;
@@ -1416,10 +1422,17 @@ section.our-facts h2 {
 }
 
 .count-digit {
+<<<<<<< HEAD
   margin: 5px 0px;
   color: var(--secondary);
   font-weight: 700;
   font-size: 36px;
+=======
+    margin: 5px 0px;
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 36px;
+>>>>>>> main
 }
 .count-title {
   font-size: 18px;
@@ -1437,6 +1450,7 @@ section.our-facts .video {
   margin-left: 70px;
   background-image: url(../images/video-item-bg.jpg);
   background-repeat: no-repeat;
+  filter: hue-rotate(120deg); /* 120 darajaga rangni o'zgartirish */
   background-position: center center;
   background-size: cover;
   border-radius: 20px;
@@ -1573,7 +1587,11 @@ section.contact-us .right-info ul li span {
 }
 
 .footer p a {
+<<<<<<< HEAD
   color: var(--ring);
+=======
+  color: var(--secondary);
+>>>>>>> main
 }
 
 /*
