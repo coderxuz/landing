@@ -183,7 +183,7 @@ a {
 }
 
 a:hover {
-  color: var(--hover);
+  color: var(--secondary-foreground2);
 }
 
 h1,
@@ -259,12 +259,12 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   transition: all 0.3s;
-  border: 1px solid var(--secondary);
+  border: 2px solid var(--secondary);
   font-weight: normal;
 }
 
 .main-button-red a:hover {
-  background-color: transparent;
+  background-color: var(--background);
   color: var(--secondary);
 }
 
@@ -283,7 +283,7 @@ body {
 
 .main-button-yellow a:hover {
   opacity: 0.9;
-  background-color: transparent;
+  background-color: var(--background);
   border: 2px solid var(--ring);
   color: var(--ring);
 }
@@ -297,7 +297,7 @@ body {
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--secondary);
   transition: 0.5s;
 }
 .section-heading h2:hover {
@@ -880,19 +880,12 @@ services
 }
 
 .services .item {
-  background-image: url(../images/service-item-bg.jpg);
-<<<<<<< HEAD
-  filter: hue-rotate(140deg);
-=======
-  filter: hue-rotate(130deg); 
->>>>>>> main
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-color: var(--background);
   border-radius: 20px;
   text-align: center;
-  color: #fff;
+  color: var(--card-foreground);
   padding: 40px;
+  border: 2px solid var(--card-foreground);
 }
 
 .services .item .icon {
@@ -908,7 +901,7 @@ services
 }
 
 .services .item p {
-  color: #fff;
+  color: var(--card-foreground);
   font-size: 13px;
 }
 
@@ -1024,7 +1017,7 @@ section.upcoming-meetings .categories {
   border-radius: 20px;
   padding: 40px;
   margin-right: 45px;
-  box-shadow: 5px 5px 5px 5px var(--secondary-foreground);
+  border: 1px solid var(--secondary);
 }
 
 section.upcoming-meetings .categories h4 {
@@ -1200,11 +1193,11 @@ section.apply-now .item p {
   transition: transform 200ms ease-in-out;
 }
 .accordion-head.is-open {
-  color: var(--secondary);
+  color: var(--foreground);
   border-bottom: none;
 }
 .accordion-head.is-open:hover {
-  color: var(--ring);
+  color: var(--secondary);
 }
 .accordion-head.is-open .icon {
   transform: rotate(45deg);
@@ -1419,17 +1412,14 @@ section.our-facts h2 {
 }
 
 .count-digit {
-<<<<<<< HEAD
   margin: 5px 0px;
   color: var(--secondary);
   font-weight: 700;
   font-size: 36px;
-=======
-    margin: 5px 0px;
-    color: var(--secondary);
-    font-weight: 700;
-    font-size: 36px;
->>>>>>> main
+  margin: 5px 0px;
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 36px;
 }
 .count-title {
   font-size: 18px;
@@ -1584,11 +1574,8 @@ section.contact-us .right-info ul li span {
 }
 
 .footer p a {
-<<<<<<< HEAD
   color: var(--ring);
-=======
   color: var(--secondary);
->>>>>>> main
 }
 
 /*
@@ -1826,7 +1813,7 @@ section.meetings-page .pagination ul li a:hover {
   width: 31%;
 }
 .meeting-item {
-  box-shadow: 10px 10px 10px var(--secondary-foreground);
+  border: 1px solid var(--secondary);
   border-radius: 20px;
 }
 
