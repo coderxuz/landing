@@ -14,6 +14,7 @@
   position: relative;
   z-index: 1;
 }
+
 .owl-carousel .owl-stage {
   position: relative;
   -ms-touch-action: pan-Y;
@@ -21,6 +22,7 @@
   -moz-backface-visibility: hidden;
   /* fix firefox animation glitch */
 }
+
 .owl-carousel .owl-stage:after {
   content: ".";
   display: block;
@@ -29,12 +31,14 @@
   line-height: 0;
   height: 0;
 }
+
 .owl-carousel .owl-stage-outer {
   position: relative;
   overflow: hidden;
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
 }
+
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item {
   -webkit-backface-visibility: hidden;
@@ -44,6 +48,7 @@
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
 }
+
 .owl-carousel .owl-item {
   position: relative;
   min-height: 1px;
@@ -52,16 +57,21 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
+
 .owl-carousel .owl-item img {
   display: block;
   width: 100%;
-  filter: brightness(0) saturate(100%) invert(71%) sepia(53%) saturate(609%)
-    hue-rotate(82deg) brightness(86%) contrast(89%);
 }
+
+.owl1 img {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(53%) saturate(609%) hue-rotate(82deg) brightness(86%) contrast(89%);
+}
+
 .owl-carousel .owl-nav.disabled,
 .owl-carousel .owl-dots.disabled {
   display: none;
 }
+
 .owl-carousel .owl-nav .owl-prev,
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
@@ -72,6 +82,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel button.owl-dot {
@@ -81,19 +92,24 @@
   padding: 0 !important;
   font: inherit;
 }
+
 .owl-carousel.owl-loaded {
   display: block;
 }
+
 .owl-carousel.owl-loading {
   opacity: 0;
   display: block;
 }
+
 .owl-carousel.owl-hidden {
   opacity: 0;
 }
+
 .owl-carousel.owl-refresh .owl-item {
   visibility: hidden;
 }
+
 .owl-carousel.owl-drag .owl-item {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
@@ -102,13 +118,16 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 .owl-carousel.owl-grab {
   cursor: move;
   cursor: grab;
 }
+
 .owl-carousel.owl-rtl {
   direction: rtl;
 }
+
 .owl-carousel.owl-rtl .owl-item {
   float: right;
 }
@@ -142,6 +161,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -163,14 +183,17 @@
 			calculation of the height of the owl-item that breaks page layouts
 		 */
 }
+
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
   transition: opacity 400ms ease;
 }
+
 .owl-carousel .owl-item .owl-lazy[src^=""],
 .owl-carousel .owl-item .owl-lazy:not([src]) {
   max-height: 0;
 }
+
 .owl-carousel .owl-item img.owl-lazy {
   transform-style: preserve-3d;
 }
@@ -222,116 +245,127 @@
   position: relative;
   z-index: 1;
   height: 100%;
-  width: 100%; }
-  .col-lg-12 {
-    position: relative;
-  }
-  
-  .about-courses-block {
-    position: absolute;
-    z-index: 9;
-  }
-  
-  .modal-back {
-    background: rgba(70, 63, 63, 0.336);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-  }
-  
-  .modal-item {
-    width: 650px;
-    height: auto;
-    background: rgb(8, 192, 8);
-    border-radius: 12px;
-    position: fixed;
-    opacity: 1;
-    box-shadow: 0px 0px 33px 6px rgba(14, 17, 19, 0.35);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .modal-item-close {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    cursor: pointer;
-    font-size: 28px;
-  }
-  
-  .modal-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 20px 20px 20px;
-  }
-  
-  .modal-block-title {
-    width: 300px;
-  }
-  
-  .modal-block-title p {
-    text-align: justify;
-  }
-  
-  .modal-block h3 {
-    margin: 10px 0;
-  }
-  
-  .modal-info {
-    width: 650px;
-    text-align: justify;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  @media only screen and (max-width:1024px) {
-    .modal-item {
-      width: 500px;
-    }
-    .modal-info {
-      width: 500px;
-    }
-    .modal-block-title {
-      width: 180px;
-    }
-    .modal-block-img img {
-      width: 250px;
-    }
-  }
-  
-  @media only screen and (max-width:320px) {
-    .modal-item {
-      width: 280px;
-    }
-    .modal-block {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .modal-info {
-      width: 280px;
-    }
-    .modal-block-title {
-      width: 180px;
-      text-align: left;
-    }
-    .modal-block-img img {
-      width: 240px;
-    }
-    .modal-item-close {
-      top: 3px;
-      right: 20px;
-    }
-  }
-  .col-lg-12 {
-    width: 100%;
-  }
-  
   width: 100%;
+}
+
+.col-lg-12 {
+  position: relative;
+}
+
+.about-courses-block {
+  position: absolute;
+  z-index: 9;
+}
+
+.modal-back {
+  background: rgba(70, 63, 63, 0.336);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.modal-item {
+  width: 650px;
+  height: auto;
+  background: rgb(8, 192, 8);
+  border-radius: 12px;
+  position: fixed;
+  opacity: 1;
+  box-shadow: 0px 0px 33px 6px rgba(14, 17, 19, 0.35);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-item-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.modal-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px 20px 20px;
+}
+
+.modal-block-title {
+  width: 300px;
+}
+
+.modal-block-title p {
+  text-align: justify;
+}
+
+.modal-block h3 {
+  margin: 10px 0;
+}
+
+.modal-info {
+  width: 650px;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media only screen and (max-width:1024px) {
+  .modal-item {
+    width: 500px;
+  }
+
+  .modal-info {
+    width: 500px;
+  }
+
+  .modal-block-title {
+    width: 180px;
+  }
+
+  .modal-block-img img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width:320px) {
+  .modal-item {
+    width: 280px;
+  }
+
+  .modal-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal-info {
+    width: 280px;
+  }
+
+  .modal-block-title {
+    width: 180px;
+    text-align: left;
+  }
+
+  .modal-block-img img {
+    width: 240px;
+  }
+
+  .modal-item-close {
+    top: 3px;
+    right: 20px;
+  }
+}
+
+.col-lg-12 {
+  width: 100%;
+}
+
+width: 100%;
 }

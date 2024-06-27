@@ -815,7 +815,7 @@ banner
 .main-banner .caption {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(150%);
 }
 
 .main-banner .caption h6 {
