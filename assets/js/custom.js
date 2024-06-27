@@ -133,8 +133,8 @@
 		items:4,
 		loop:true,
 		dots: true,
-		nav: false,
-		autoplay: true,
+		nav: true,
+		autoplay: false,
 		margin:30,
 		pointer:false,
 		  responsive:{

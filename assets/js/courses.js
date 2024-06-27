@@ -1,3 +1,4 @@
+// Render courses on the page
 let courses = document.querySelector('.item-block');
 let object = [
   { id: 1, img: 'assets/images/course-01.jpg', title: 'Front end', price: '$160', aboutCourse: 'Frontend dasturchilar Chrome kabi brauzerlarda ishlaydigan saytlarning koʻrinish qismi kodini yozishga masʼul hisoblanadi. Frontendchilar ish davomida HTML, CSS va JavaScript instrumentlaridan foydalanib chiroyli, ' },
@@ -6,6 +7,7 @@ let object = [
   { id: 4, img: 'assets/images/course-04.jpg', title: 'Computer Science', price: '$120', aboutCourse: 'Computer science is the study of algorithmic processes, computational machines, and computation itself. It involves the study of data structures, algorithms, and the development of software and hardware.' }
 ];
 
+// Generate the HTML for each course
 courses.innerHTML = object.map(item => {
   return `
     <div class="item" data-id="${item.id}" data-img="${item.img}" data-title="${item.title}" data-price="${item.price}" data-about="${item.aboutCourse}">
@@ -27,48 +29,59 @@ courses.innerHTML = object.map(item => {
               <span>${item.price}</span>
             </div>
           </div>
+          <button class="modal-btn">Подробнее</button>
         </div>
       </div>
     </div>
     `;
 }).join('');
 
+// Modal details container
 let detailsContainer = document.querySelector('.about-courses-block');
+
+// Select all item elements and modal buttons
 let items = document.querySelectorAll('.item');
-items.forEach(item => {
-  item.addEventListener('click', () => {
-    let img = item.getAttribute('data-img');
-    let title = item.getAttribute('data-title');
-    let price = item.getAttribute('data-price');
-    let about = item.getAttribute('data-about');
+let buttons = document.querySelectorAll('.modal-btn');
 
+// Add event listener to each button
+buttons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    // Get the parent item element
+    let parentItem = event.target.closest('.item');
+
+    // Retrieve data attributes from the parent item
+    let img = parentItem.getAttribute('data-img');
+    let title = parentItem.getAttribute('data-title');
+    let price = parentItem.getAttribute('data-price');
+    let about = parentItem.getAttribute('data-about');
+
+    // Display the modal
     document.querySelector('body').style.overflowY = 'hidden';
-    document.querySelector('.modal-window').style.background = 'rgba(70, 63, 63, 0.336)'
-    document.querySelector('.modal-window').style.zIndex = '2'
-
+    document.querySelector('.modal-window').style.display = 'block';
     detailsContainer.style.display = 'block';
 
+    // Populate the modal with the course details
     detailsContainer.innerHTML = `  
-        <div class="modal-back">
-            <div class="modal-item">
-                <div class="modal-item-close">
-                    <i class="fa-regular fa-circle-xmark modal-item-close-block"></i>
-                </div>
-                <div class="modal-block">
-                    <div class="modal-block-img">
-                        <img src="${img}" alt="">
-                    </div>
-                    <div class="modal-block-title">
-                        <h3>${title}</h3>
-                        <p>${price}</p>
-                    </div>
-                </div>
-                <div class="modal-info">
-                    <p>${about}</p>
-                </div>
+      <div class="modal-back">
+        <div class="modal-item">
+          <div class="modal-item-close">
+            <i class="fa-regular fa-circle-xmark modal-item-close-block"></i>
+          </div>
+          <div class="modal-block">
+            <div class="modal-block-img">
+              <img src="${img}" alt="${title}">
             </div>
-        </div>   
-        `;
+            <div class="modal-block-title">
+              <h3>${title}</h3>
+              <p>${price}</p>
+            </div>
+          </div>
+          <div class="modal-info">
+            <p>${about}</p>
+          </div>
+        </div>
+      </div>   
+    `;
 
     // Close modal logic
     let modalBack = document.querySelector('.modal-back');
@@ -76,13 +89,15 @@ items.forEach(item => {
     let modalItem = document.querySelector('.modal-item');
     modalItem.classList.add('animation');
     modalItem.classList.remove('backanim');
+    modalBack.style.width = '100%'
+    modalBack.style.height = '100%'
     modalBack.addEventListener('click', (event) => {
       if (event.target === modalBack || event.target === closeButton) {
-        // detailsContainer.style.display = 'none';
         modalItem.classList.remove('animation');
-        modalBack.classList.add('backanim');
-        document.querySelector('.modal-window').style.background = 'none'
-        document.querySelector('.modal-window').style.zIndex = '-5'
+        modalItem.classList.add('backanim');
+        modalBack.style.width = '0'
+        modalBack.style.height = '0'
+        document.querySelector('.modal-window').style.display = 'none';
         document.querySelector('body').style.overflowY = 'auto';
       }
     });
