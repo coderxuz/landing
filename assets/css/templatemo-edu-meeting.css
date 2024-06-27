@@ -201,7 +201,7 @@ ul {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 25px;
   color: #2a2a2a;
 }
@@ -1632,8 +1632,8 @@ section.meetings-page .filters {
 
 section.meetings-page .filters li {
   font-size: 13px;
-  color: #a12c2f;
-  background-color: #fff;
+  color: var(--card);
+  background-color: var(--secondary);
   padding: 11px 30px;
   display: inline-block;
   border-radius: 22px;
@@ -1642,12 +1642,13 @@ section.meetings-page .filters li {
   transition: all 0.3s;
   cursor: pointer;
   margin: 0px 3px;
+  border: 1px solid var(--secondary);
 }
 
-section.meetings-page .filters ul li.active,
-section.meetings-page .filters ul li:hover {
-  background-color: #a12c2f;
-  color: #fff;
+section.meetings-page .filters ul section.meetings-page,
+.filters ul li:hover {
+  background-color: var(--card);
+  color: var(--secondary);
 }
 
 section.meetings-page .pagination {
@@ -1664,15 +1665,16 @@ section.meetings-page .pagination ul li {
 section.meetings-page .pagination ul li a {
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--secondary);
   border-radius: 10px;
-  color: #1f272b;
+  color: var(--card);
   display: inline-block;
   text-align: center;
   line-height: 40px;
   font-weight: 600;
   font-size: 15px;
   transition: all 0.3s;
+  border: 1px solid var(--secondary);
 }
 
 section.meetings-page .main-button-red {
@@ -1685,10 +1687,10 @@ section.meetings-page .main-button-red a {
   margin-top: 30px;
 }
 
-section.meetings-page .pagination ul li.active a,
+section.meetings-page .pagination ul a,
 section.meetings-page .pagination ul li a:hover {
-  background-color: #a12c2f;
-  color: #fff;
+  background-color: var(--card);
+  color: var(--secondary);
 }
 
 .meeting-single-item .thumb {
