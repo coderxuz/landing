@@ -881,7 +881,7 @@ services
   text-align: center;
   color: var(--card-foreground);
   padding: 40px;
-  border: 2px solid var(--card-foreground);
+  border: 2px solid var(--secondary);
 }
 
 .services .item .icon {
@@ -1954,6 +1954,5 @@ responsive
 
   .header-area .main-nav .nav li ul.sub-menu li a {
     color: #1f272b;
-
   }
 }

@@ -270,6 +270,7 @@
   padding: 10px 12px;
   border-radius: 12px;
   color: white;
+  border: 1px solid green;
 }
 .modal-btn:hover {
   border: 1px solid green;
