@@ -881,7 +881,7 @@ services
   text-align: center;
   color: var(--card-foreground);
   padding: 40px;
-  border: 2px solid var(--secondary);
+  border: 1px solid var(--foreground);
 }
 
 .services .item .icon {
@@ -1013,7 +1013,7 @@ section.upcoming-meetings .categories {
   border-radius: 20px;
   padding: 40px;
   margin-right: 45px;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--foreground);
 }
 
 section.upcoming-meetings .categories h4 {
@@ -1811,7 +1811,7 @@ section.meetings-page .pagination ul li a:hover {
   width: 31%;
 }
 .meeting-item {
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--foreground);
   border-radius: 20px;
 }
 
